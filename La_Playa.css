@@ -1,0 +1,611 @@
+*, *:before, *:after
+{
+	-moz-box-sizing:		border-box;
+	-webkit-box-sizing:		border-box;
+	box-sizing:				border-box;
+}
+
+.la_playa /* making assumptions here */
+{
+	background:				#000;
+	z-index:				1000;
+	border-radius: 			.1em;
+	width:					98%;
+
+}
+
+.lp_about_popup
+{
+	position:				fixed;
+	top:					10%;
+	left:					30%;
+	right:					30%;
+	bottom:					10%;
+	background:				hsla(0,0%,5%,1);
+	color:					hsla(0,0%,90%,1);
+	background:				linear-gradient(to bottom,			hsla(0,0%,15%,1) 0%, hsla(0,0%,15%,1) 25%, hsla(0,0%,5%,1) 85%, hsla(0,0%,0%,1) 100%);
+	padding:				20px;
+	border-radius:			20px;
+	overflow:				auto;
+	box-shadow:				1px 1px 3px hsla(0,0%,0%,0.75), 5px 5px 30px hsla(0,0%,0%,0.5);
+}
+
+.lp_about_popup h1,
+.lp_about_popup h2
+{
+	font-family:			'Georgia', serif;
+	text-align:				center;
+	font-weight:			400;
+}
+
+.lp_about_popup h1
+{
+	font-size:				3.5em;
+	margin-bottom:			0em;
+}
+.lp_about_popup h2
+{
+	font-size:				2.5em;
+}
+
+.lp_status_bar_fps
+{
+	display:				inline-block;
+	background:				linear-gradient(to bottom,			hsla(0,0%,10%,1) 0%, hsla(0,0%,10%,1) 25%, hsla(0,0%,15%,1) 85%, hsla(0,0%,20%,1) 100%);
+	color:					hsla(0,0%,95%,1);
+	float:					right;
+	width:					200px;
+	border-radius:			0.1em 0.2em 1em 0.5em;
+}
+
+.lp_status_bar_status
+{
+	float:					left;
+	color:					hsla(0,0%,15%,1);
+	border-radius:			0.2em 0.1em 0.5em 1em;
+	background:				linear-gradient(to bottom,			hsla(0,0%,65%,1) 0%, hsla(0,0%,65%,1) 25%, hsla(0,0%,55%,1) 85%, hsla(0,0%,50%,1) 100%);
+}
+
+.lp_status_bar_fps,
+.lp_status_bar_status
+{
+	padding:				0.2em 0.8em 0.3em 0.8em;
+	font-size:				0.9em;
+}
+
+.lp_status_bar
+{
+	background:				linear-gradient(to bottom,			hsla(0,0%,65%,1) 0%, hsla(0,0%,65%,1) 25%, hsla(0,0%,55%,1) 85%, hsla(0,0%,50%,1) 100%);
+}
+
+.lp_song_title
+{
+	line-height:			0.9em;
+	font-size:				1.35em;
+	padding:				0.1em 1.5em 0.1em 1.5em;
+	border-radius: 			.1em .1em 0 0;
+}
+.lp_song_info
+{
+	font-size:				0.95em;
+	padding:				0.05em 1.5em 0.1em 1.5em;
+	background:				#000;
+	color:					hsla(0,0%,80%,1);
+	text-shadow:			0 0 3px hsla(0,0%,70%,1);
+}
+.lp_song_info a
+{
+	color:					hsla(52,100%,50%,1);
+	text-decoration:		none;
+	text-shadow:			none;
+	transition: 			color .125s ease-in-out;
+}
+
+.lp_song_info a:hover
+{
+	color:					hsla(52,100%,60%,1);
+	text-shadow:			0 0 3px hsla(52,100%,30%,1);
+}
+
+.lp_controls
+{
+	font-size:				1.0em;
+	padding:				0;
+	text-align:				center;
+	line-height:			0.75em;
+	align-items: 			stretch;
+	justify-content:		center;
+	display: 				flex;
+	flex-wrap:				wrap;
+}
+
+.lp_controls .lp_buttongroup
+{
+	display:				inline-block;
+}
+
+.lp_duration
+{
+	display:				inline-block;
+	border-radius:			3px;
+	font-family:			monospace;
+	font-weight:			400;
+	letter-spacing:			-0.015em;
+	line-height:			1.0em;
+	font-size:				1.12em;
+	padding:				0.6em;
+	margin:					0.05em 0.15em 0.02em 0.15em;
+}
+
+.lp_transport
+{
+	display:				inline-block;
+	line-height:			1.0em;
+	margin:					0.1em 0.5em;
+}
+
+.lp_options_group
+{
+	display:				inline-block;
+	line-height:			1.0em;
+	margin:					0.1em 0.5em;
+}
+
+.lp_webgl_group
+{
+	display:				inline-block;
+	line-height:			1.0em;
+	margin:					0.1em 0.5em;
+}
+
+.lp_controls .lp_vumeter
+{
+	width:					100%;
+	height:					16px;
+	margin:					0;
+}
+
+.lp_button
+{
+	border-radius:			0.055em;
+	font-size:				0.95em;
+	display:				inline-block;
+	font-family:			Arial, sans-serif;
+	margin:					0;
+	padding:				.35em .125em;
+	cursor:					pointer;
+}
+
+
+.lp_prev_song
+{
+	background-image:		url('./play_prev.png');
+}
+.lp_next_song
+{
+	background-image:		url('./play_next.png');
+}
+.lp_loop_toggle
+{
+	background-image:		url('./loop.png');
+}
+.lp_pause
+{
+	background-image:		url('./pause.png');
+}
+.lp_play
+{
+	background-image:		url('./play.png');
+}
+.lp_settings_toggle
+{
+	background-image:		url('./settings.png');
+}
+.lp_stereoscope_toggle
+{
+	background-image:		url('./stereoscope.png');
+}
+.lp_playlist_toggle
+{
+	background-image:		url('./playlist.png');
+}
+.lp_webgl_toggle
+{
+	background-image:		url('./webgl.png');
+}
+.lp_webgl_spectrogram_toggle
+{
+	background-image:		url('./fft.png');
+}
+.lp_oscilloscope_toggle
+{
+	background-image:		url('./oscilloscope.png');
+}
+.lp_oscilloscope_pingpong_toggle
+{
+	background-image:		url('./oscilloscope_pingpong.png');
+}
+.lp_vumeter_toggle
+{
+	background-image:		url('./vumeter.png');
+}
+.lp_fullscreen_toggle
+{
+	background-image:		url('./fullscreen.png');
+}
+.lp_about
+{
+	background-image:		url('./about.png');
+}
+
+
+.lp_prev_song,
+.lp_next_song,
+.lp_loop_toggle,
+.lp_pause,
+.lp_play,
+.lp_settings_toggle,
+.lp_stereoscope_toggle,
+.lp_playlist_toggle,
+.lp_webgl_toggle,
+.lp_webgl_spectrogram_toggle,
+.lp_oscilloscope_toggle,
+.lp_oscilloscope_pingpong_toggle,
+.lp_vumeter_toggle,
+.lp_fullscreen_toggle,
+.lp_about
+{
+	background-size:	 	60% 100%;
+	background-position:	50% 50%;
+	background-repeat:	 	no-repeat;
+	width:					29px;
+	height:					17px;
+}
+
+
+
+.lp_settings
+{
+	padding:				0.25em 0.25em;
+	text-align:				left;
+}
+
+.lp_settings hr
+{
+	border-top:				1px dashed #333;
+	border-left:			none;
+	border-right:			none;
+	border-bottom:			1px dotted #555;
+	margin:					0.112rem;
+	box-shadow:				inset 0 5px 10px -5px  hsla(0,0%,0%,0.75);
+}
+
+
+.la_playa label
+{
+	background:				hsla(0,0%,0%,0.2);
+	border:					1px solid hsla(0,0%,0%,0.3);
+	margin:					2px;
+	padding:  				0;
+	display:				inline-block;
+	color:					hsla(0,0%,70%,1);
+	text-shadow:			1px 1px 2px hsla(0,0%,0%,0.7);
+	font-size:				0.8em;
+	/*text-align:				center;*/
+	font-family:			"Arial", sans-serif;
+	border-radius:			5px;
+	box-shadow:				inset 1px 1px 2px hsla(0,0%,0%,0.25), 1px 1px 2px hsla(0,0%,100%,0.25);
+}
+
+.la_playa label span
+{
+	display:				block;
+	font-size: 				1.0em;
+	color:					#ececec;
+	text-shadow:			1px 1px 2px #222;
+	opacity:				0.65;
+	margin:					.05em 0.4em 0.1em -.1em;
+	padding:				0.125rem 0.75rem;
+	text-align:				center;
+}
+
+.la_playa .lp_settings label
+{
+	width:					32%;
+}
+
+
+.la_playa label:hover span
+{
+	opacity:				1.0;
+}
+.la_playa label div,
+.la_playa label input:not([type=submit]):not([type=reset]),  /* just to override specificity heh */
+.la_playa select
+{
+	display:				inline-block;
+	padding:				0.05rem 0.25rem;
+	box-shadow:				1px 1px 2px hsla(0,0%,0%,0.25), inset 1px 1px 2px hsla(0,0%,100%,0.25);
+	width: 					100%;
+	font-size: 				0.8rem;
+	border-radius:			3px;
+	margin:					0;
+	background:				linear-gradient(to bottom, hsl(0,0%,9%) 0%, hsl(0,0%,20%) 85%, hsl(0,0%,35%) 100%);
+	color:					hsl(0,0%,85%);
+	border-top:				1px solid hsla(0,0%,20%,0.3);
+	border-left:			1px solid hsla(0,0%,20%,0.3);
+	border-right:			1px solid hsla(0,0%,70%,0.4);
+	border-bottom:			1px solid hsla(0,0%,80%,0.4);
+	box-shadow:				none;
+}
+
+.la_playa .lp_settings label input:not([type=range])
+{
+	width:					30% !important;
+}
+.la_playa .lp_settings label input[type=range]
+{
+	width:					70% !important;
+}
+
+.la_playa select
+{
+	color:					#000;
+	background:				linear-gradient(to bottom,				hsl(0,0%,99%) 0%, hsl(0,0%,95%) 15%, hsl(0,0%,70%) 100%);
+	border-top:				1px solid hsla(0,0%,80%,0.4);
+	border-left:			1px solid hsla(0,0%,70%,0.4);
+	border-right:			1px solid hsla(0,0%,20%,0.3);
+	border-bottom:			1px solid hsla(0,0%,20%,0.3);
+}
+
+.la_playa label input:not([type=submit]):not([type=reset]):hover
+{
+	color:					hsl(0,0%,90%);
+}
+
+.la_playa label input:not([type=submit]):not([type=reset]):active,
+.la_playa label input:not([type=submit]):not([type=reset]):focus
+{
+	color:					hsl(0,0%,99%);
+}
+
+.la_playa label input[type=range]
+{
+	margin:					0;
+	display: 				inline-block;
+}
+
+.la_playa label select
+{
+	border-radius:			3px;
+	margin-right:			-5px;
+}
+
+.lp_playlist
+{
+	padding:				0px;
+	overflow:				auto;
+	align-items: 			stretch;
+	display: 				flex;
+	flex-wrap:				wrap;
+}
+
+.lp_playlist_item
+{
+	cursor:					pointer;
+	font-size:				0.9em;
+	padding:				0.2em 0.35em;
+	border-radius:			.1em;
+	width:					100%;
+	margin:					0;
+	overflow:				hidden;
+	text-shadow:			0 -1px 1px hsla(0,100%,100%,0.125),
+							0 1px 1px hsla(0,100%,0%,0.45);
+	display:				inline-block;
+	transition: 			box-shadow .5s ease-in-out, color .5s ease-in-out, text-shadow .5s ease-in-out, background .5s ease-in-out, border-radius .25s ease-in-out;
+	clear:					both;
+}
+
+.lp_playlist_item .playtime
+{
+	float:					right;
+	font-size:				0.75em;
+	opacity:				0.7;
+}
+
+.lp_parent_playlist
+{
+	width:					100%;
+	cursor:					pointer;
+	font-size:				1.05em;
+	font-weight:			700;
+	display:				block;
+	text-align:				center;
+	padding:				0.7em 0.5em 0.9em 0.5em;
+}
+
+.lp_playlist_item.sublist
+{
+	transition: 			box-shadow .5s ease-in-out, color .5s ease-in-out, text-shadow .5s ease-in-out, background .5s ease-in-out, border-radius .25s ease-in-out;
+	font-size:				1.1em;
+	cursor:					pointer;
+	line-height:			1em;
+	margin:					0;
+	padding:				0.15em 1.5em 0.25em 0.5em;
+	text-align: 			center;
+}
+
+.lp_playlist_item.unpublished
+{
+	background:				hsla(0,50%,90%,1);
+	background:				linear-gradient(to bottom,				hsla(0,50%,95%,1) 0%, hsla(0,50%,90%,1) 5%, hsla(0,50%,85%,1) 100%);
+	color:					hsla(0,50%,15%,1);
+}
+
+.lp_playlist_item.unpublished:hover
+{
+	background:				hsla(0,50%,15%,1);
+	background:				linear-gradient(to bottom,				hsla(0,50%,99%,1) 0%, hsla(0,50%,95%,1) 5%, hsla(0,50%,90%,1) 100%);
+	color:					hsla(0,50%,25%,1);
+}
+
+.lp_playlist_item.unpublished.selected
+{
+	background:				hsla(0,100%,55%,1);
+	background:				linear-gradient(to bottom,				hsla(0,100%,60%,1) 0%, hsla(0,100%,55%,1) 5%, hsla(0,100%,50%,1) 100%);
+	box-shadow:				0 0 12px hsla(0,100%,60%,0.75);
+	border-left:			1px solid hsla(0,100%,75%,0.75);
+	border-right:			1px solid hsla(0,100%,30%,0.75);
+	border-bottom:			1px solid hsla(0,100%,30%,0.75);
+	border-top:				1px solid hsla(0,100%,75%,0.75);
+	color:					hsla(0,100%,5%,1);
+}
+
+.lp_playlist_item.unpublished.selected:hover
+{
+	background:				hsla(0,100%,65%,1);
+	background:				linear-gradient(to bottom,				hsla(0,100%,70%,1) 0%, hsla(0,100%,65%,1) 5%, hsla(0,100%,60%,1) 100%);
+	box-shadow:				0 0 12px hsla(0,100%,70%,0.75);
+	border-left:			1px solid hsla(0,100%,85%,0.75);
+	border-right:			1px solid hsla(0,100%,30%,0.75);
+	border-bottom:			1px solid hsla(0,100%,30%,0.75);
+	border-top:				1px solid hsla(0,100%,85%,0.75);
+}
+
+
+
+.lp_playlist_footer
+{
+	font-size:				1.0em;
+	padding:				0.25em 0.75em;
+	color:					#eee;
+	text-shadow:			0 1px 1px hsla(0,0%,100%,0.25);
+	line-height:			1.1em;
+	margin:					0;
+	width:					100%;
+	overflow:				hidden;
+	display:				inline-block;
+	text-align: 			center;
+}
+
+
+.la_playa canvas
+{
+	display:				block;
+    image-rendering:		optimizeSpeed;
+    image-rendering:		-moz-crisp-edges;
+    image-rendering:		-webkit-optimize-contrast;
+    image-rendering:		-o-crisp-edges;
+    image-rendering:		optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+	background:				#000;
+}
+
+.lp_controls canvas
+{
+	display:				inline-block;
+}
+
+/***************************************** sliders ********************************************************/
+
+
+input[type=range]
+{
+    -webkit-appearance:		none;
+    background-color:		silver;
+    height:					8px;
+    border-radius:			5px;
+    margin:					0;
+    padding:				0;
+	background:				linear-gradient(to bottom,			hsla(0,0%,5%,1) 0%, hsla(0,0%,10%,1) 5%, hsla(0,0%,15%,1) 100%);
+}
+
+input[type="range"]::-webkit-slider-thumb
+{
+     -webkit-appearance:	none;
+    background-color:		#000;
+	background:				linear-gradient(to bottom,			hsla(0,0%,90%,1) 0%, hsla(0,0%,85%,1) 5%, hsla(0,0%,80%,1) 100%);
+    width:					8px;
+    height:					12px;
+    border-radius:			2px;
+}
+
+
+
+/**********************************************************************************************************/
+
+@media screen and (min-width: 60.001em)
+{
+}
+
+@media screen and (max-width: 40em)
+{
+	.lp_song_title
+	{
+		padding:		0.075em 0.75em 0.05em 0.75em;
+	}
+	.lp_song_info
+	{
+		padding:		0.05em 1.25em 0.05em 1.25em;
+	}
+	.lp_playlist_item:first-child
+	{
+		border-radius:			10px 10px 0 0;
+	}
+	.lp_playlist_item:last-child
+	{
+		border-radius:			0 0 10px 10px;
+	}
+}
+
+@media screen and (max-width: 25em)
+{
+	.lp_controls
+	{
+		padding:		0.15em 0.5em;
+	}
+	.lp_song_title
+	{
+		padding:		0.05em 0.5em 0.025em 0.5em;
+	}
+	.lp_song_info
+	{
+		padding:		0.05em 0.5em 0.025em 0.5em;
+	}
+	.la_playa .lp_controls label,
+	.la_playa .lp_controls label input
+	{
+		width:			100%;
+	}
+	.lp_settings select,
+	label
+	{
+		/*width:			50%;*/
+	}
+	.lp_button
+	{
+		margin:			0.125em 0.05em;
+	}
+}
+
+@media screen and (max-width: 15em)
+{
+	.lp_controls
+	{
+		padding:		0.1em 0.25em;
+	}
+	.lp_song_title
+	{
+		padding:		0.025em 0.25em 0.0125em 0.25em;
+	}
+	.lp_song_info
+	{
+		padding:		0.05em 0.25em 0.0125em 0.25em;
+	}
+	.lp_button
+	{
+		margin:			0.0625em 0.025em;
+	}
+}
+
+
