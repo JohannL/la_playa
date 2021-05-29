@@ -1,1 +1,1 @@
-![screenshot](https://github.com/JohannL/la_playa/la_playa.png)
+![screenshot](https://github.com/JohannL/la_playa/raw/main/la_playa.png)
